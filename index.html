@@ -2,142 +2,967 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Sitio oficial de OINKZILLA STUDIOS. Aplicaciones, herramientas digitales y soporte.">
-  <title>OINKZILLA STUDIOS | Sitio Oficial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B1728">
+<meta name="description" content="OINKZILLA STUDIOS: estudio independiente de aplicaciones, videojuegos y herramientas digitales. Conoce StockFlow.">
+<title>OINKZILLA STUDIOS — Software & Games</title>
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+:root {
+  --navy:#10243A;
+  --dark:#0B1728;
+  --darker:#07111E;
+  --pink:#FF70A8;
+  --green:#10B981;
+  --white:#FFFFFF;
+  --muted:#9BAEC1;
+  --light:#F5F7FB;
+  --ink:#15273C;
+  --border:#E6ECF2;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #10243a;
-      line-height: 1.6;
-    }
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,
+    "Segoe UI",Arial,sans-serif;
+  color:var(--ink);
+  background:var(--light);
+  -webkit-font-smoothing:antialiased;
+}
+a {text-decoration:none;color:inherit}
+button,a { -webkit-tap-highlight-color:transparent }
+a:focus-visible {
+  outline:3px solid var(--green);
+  outline-offset:4px;
+}
+.container {
+  width:min(1160px,calc(100% - 40px));
+  margin:auto;
+}
+section[id] {scroll-margin-top:95px}
 
-    header {
-      background: #10243a;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
+/* NAVIGATION */
 
-    header h1 {
-      font-size: 34px;
-      margin: 0 0 10px;
-      letter-spacing: 1px;
-    }
+.navbar {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,19,33,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.nav-inner {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo {
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+  flex-shrink:0;
+}
+.logo-main {
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  color:white;
+}
+.logo-main span {color:var(--pink)}
+.logo-small {
+  margin-top:6px;
+  color:#B6C6D4;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:4px;
+}
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:29px;
+}
+.nav-links a {
+  color:#BECBD9;
+  font-size:13px;
+  font-weight:600;
+  transition:color .2s;
+}
+.nav-links a:hover {color:white}
+.nav-contact {
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:9px;
+  padding:11px 17px;
+  color:white!important;
+}
 
-    header p {
-      color: #d4e2eb;
-      margin: 0;
-    }
+/* HERO */
 
-    main {
-      max-width: 850px;
-      margin: 35px auto;
-      padding: 0 20px;
-    }
+.hero {
+  color:white;
+  background:
+    radial-gradient(ellipse at 83% 24%,
+      rgba(255,112,168,.13),transparent 37%),
+    radial-gradient(ellipse at 68% 75%,
+      rgba(16,185,129,.11),transparent 45%),
+    linear-gradient(125deg,#0B1728,#10243A);
+  position:relative;
+  overflow:hidden;
+}
+.hero:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:linear-gradient(90deg,transparent 10%,black);
+  pointer-events:none;
+}
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:65px;
+  align-items:center;
+  min-height:660px;
+  padding:95px 0 105px;
+  position:relative;
+}
+.eyebrow {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:30px;
+  padding:10px 15px;
+  color:#C7D9E6;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+.eyebrow i {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--pink);
+  box-shadow:0 0 14px var(--pink);
+}
+.hero h1 {
+  max-width:660px;
+  font-size:clamp(42px,5.4vw,73px);
+  line-height:1.08;
+  letter-spacing:-3px;
+  margin:28px 0 22px;
+  font-weight:850;
+}
+.hero h1 .accent {
+  background:linear-gradient(95deg,#FF86B3,#BBA4FF);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero-description {
+  color:#B6C6D5;
+  font-size:16px;
+  line-height:1.9;
+  max-width:520px;
+  margin:0;
+}
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:14px 23px;
+  border-radius:11px;
+  font-size:13px;
+  font-weight:750;
+  transition:transform .2s,background .2s;
+}
+.btn:hover {transform:translateY(-2px)}
+.btn-primary {
+  background:var(--green);
+  color:#062D21;
+}
+.btn-primary:hover {background:#34D399}
+.btn-outline {
+  border:1px solid rgba(255,255,255,.18);
+  color:white;
+  background:rgba(255,255,255,.045);
+}
+.hero-note {
+  color:#8EA2B7;
+  font-size:12px;
+  margin-top:28px;
+}
 
-    .card {
-      background: white;
-      padding: 28px;
-      margin-bottom: 22px;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px #10243a12;
-    }
+/* DECORATIVE APPLICATION PREVIEW */
 
-    h2 { margin-top: 0; }
+.visual {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:520px;
+  position:relative;
+}
+.visual-glow {
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle,
+    rgba(16,185,129,.19),
+    rgba(255,112,168,.07) 46%,
+    transparent 72%);
+  filter:blur(15px);
+}
+.visual-ring {
+  position:absolute;
+  width:430px;
+  height:430px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:50%;
+}
+.visual-ring:after {
+  content:"";
+  position:absolute;
+  inset:36px;
+  border:1px dashed rgba(255,255,255,.09);
+  border-radius:50%;
+}
+.phone {
+  position:relative;
+  z-index:2;
+  width:273px;
+  padding:10px;
+  border:5px solid #35485A;
+  border-radius:38px;
+  background:#101B29;
+  box-shadow:
+    0 42px 100px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.18);
+  transform:rotate(5deg);
+}
+.phone-screen {
+  overflow:hidden;
+  background:#F5F8FB;
+  border-radius:26px;
+  min-height:474px;
+  color:#132C40;
+}
+.phone-status {
+  background:#10243A;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  padding:13px 18px 7px;
+  font-size:10px;
+}
+.app-header {
+  background:#10243A;
+  color:white;
+  padding:13px 18px 27px;
+}
+.app-name {
+  font-weight:850;
+  font-size:20px;
+  letter-spacing:-.6px;
+}
+.app-name span {color:var(--green)}
+.app-subtitle {
+  color:#BDD0DD;
+  font-size:10px;
+  margin-top:5px;
+}
+.app-content {
+  padding:16px;
+  display:grid;
+  gap:12px;
+}
+.cash-card {
+  background:#10243A;
+  border-radius:13px;
+  color:white;
+  padding:15px;
+}
+.cash-top {
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  color:#C5D4DE;
+}
+.cash-open {
+  background:rgba(16,185,129,.19);
+  color:#7DEDC1;
+  border-radius:20px;
+  padding:3px 8px;
+}
+.cash-value {
+  font-size:19px;
+  font-weight:850;
+  margin-top:13px;
+}
+.cash-caption {
+  font-size:10px;
+  color:#AFC3D2;
+}
+.mini-metrics {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.mini-metric {
+  background:white;
+  border:1px solid #E3EAF0;
+  border-radius:12px;
+  padding:12px;
+}
+.mini-metric small {
+  display:block;
+  color:#708195;
+  font-size:9px;
+}
+.mini-metric strong {
+  display:block;
+  margin-top:9px;
+  font-size:12px;
+}
+.mini-list {
+  background:white;
+  border:1px solid #E4EAF0;
+  padding:13px;
+  border-radius:12px;
+}
+.mini-list h4 {
+  font-size:11px;
+  margin:0 0 10px;
+}
+.mini-row {
+  display:flex;
+  justify-content:space-between;
+  padding:7px 0;
+  border-top:1px solid #EFF2F6;
+  font-size:10px;
+}
+.mini-row span:last-child {color:#06986A}
+.phone-nav {
+  display:flex;
+  justify-content:space-around;
+  border-top:1px solid #E7EDF1;
+  background:white;
+  color:#526578;
+  padding:12px 4px;
+  font-size:9px;
+}
+.phone-nav strong {color:#079666}
+.visual-caption {
+  position:absolute;
+  right:1%;
+  bottom:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(14,30,45,.9);
+  border-radius:12px;
+  padding:13px 16px;
+  z-index:3;
+  color:#CDDAE4;
+  font-size:11px;
+  box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
 
-    .tag {
-      display: inline-block;
-      color: #067a54;
-      background: #e1f8ef;
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 13px;
-      font-weight: bold;
-    }
+/* SECTION COMMON */
 
-    a { color: #07865d; }
+.section {
+  padding:100px 0;
+}
+.section-label {
+  color:#07865E;
+  font-size:11px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.section-title {
+  margin:14px 0 18px;
+  font-size:clamp(30px,4vw,47px);
+  line-height:1.18;
+  letter-spacing:-1.8px;
+  color:var(--navy);
+}
+.section-description {
+  color:#64768A;
+  line-height:1.9;
+  max-width:640px;
+  font-size:15px;
+}
 
-    .button {
-      display: inline-block;
-      background: #10b981;
-      color: #062b22;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* PROJECT */
 
-    .button:hover { background: #0d9d6e; }
+.project-section {
+  background:white;
+}
+.project-head {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:25px;
+}
+.project-status {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#E5F8F0;
+  color:#087D58;
+  border-radius:30px;
+  padding:10px 15px;
+  font-size:11px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.project-status:before {
+  content:"";
+  width:7px;
+  height:7px;
+  background:var(--green);
+  border-radius:50%;
+}
+.feature-grid {
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.feature-card {
+  background:#F8FAFC;
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:29px;
+  transition:transform .2s,border-color .2s;
+}
+.feature-card:hover {
+  transform:translateY(-5px);
+  border-color:#A5E8CE;
+}
+.feature-icon {
+  width:46px;
+  height:46px;
+  background:#E5F8F0;
+  color:#07875F;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  font-size:21px;
+  font-weight:800;
+}
+.feature-card h3 {
+  margin:22px 0 10px;
+  font-size:18px;
+  color:var(--navy);
+}
+.feature-card p {
+  margin:0;
+  color:#66788B;
+  line-height:1.85;
+  font-size:13px;
+}
+.project-bottom {
+  margin-top:28px;
+  padding:23px 27px;
+  border-radius:14px;
+  background:#10243A;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.project-bottom p {
+  margin:6px 0 0;
+  color:#B6C7D4;
+  font-size:13px;
+}
+.project-bottom a {
+  color:#A5F3D4;
+  font-size:13px;
+  font-weight:750;
+  white-space:nowrap;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: #526575;
-      font-size: 14px;
-    }
-  </style>
+/* ABOUT */
+
+.about-section {
+  background:#F3F6FA;
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.about-panel {
+  background:linear-gradient(135deg,#10243A,#164C4B);
+  color:white;
+  border-radius:22px;
+  padding:45px;
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  overflow:hidden;
+}
+.about-panel:after {
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  right:-70px;
+  bottom:-120px;
+  background:rgba(16,185,129,.13);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+}
+.about-panel .big-symbol {
+  font-size:55px;
+  color:var(--pink);
+  font-weight:900;
+}
+.about-panel p {
+  font-size:22px;
+  font-weight:750;
+  max-width:340px;
+  line-height:1.4;
+  letter-spacing:-.7px;
+  z-index:1;
+  margin:20px 0 0;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background:var(--darker);
+  color:white;
+  text-align:center;
+  padding:96px 0;
+}
+.contact-section .section-label {
+  color:#82E9C2;
+}
+.contact-section .section-title {
+  color:white;
+  max-width:710px;
+  margin:15px auto;
+}
+.contact-section p {
+  color:#AFC2D1;
+  line-height:1.85;
+  max-width:600px;
+  margin:0 auto;
+}
+.contact-section .btn {
+  margin-top:28px;
+}
+.contact-email {
+  display:block;
+  margin-top:21px;
+  color:#89EBC4;
+  font-size:13px;
+  overflow-wrap:anywhere;
+}
+
+/* FOOTER */
+
+footer {
+  background:#070F1B;
+  color:#93A5B7;
+  border-top:1px solid rgba(255,255,255,.09);
+  padding:30px 0;
+}
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.footer-brand {
+  font-size:14px;
+  color:white;
+  font-weight:850;
+}
+.footer-brand span {color:var(--pink)}
+.footer-inner small {font-size:11px}
+.footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+}
+.footer-links a {
+  font-size:12px;
+  color:#AABAC8;
+}
+.footer-links a:hover {color:white}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .hero-grid {
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:75px 0;
+  }
+  .visual {min-height:540px}
+  .about-grid {gap:30px}
+  .feature-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .container {width:calc(100% - 30px)}
+  .nav-inner {
+    min-height:75px;
+    flex-wrap:wrap;
+    padding:17px 0;
+  }
+  .nav-links {
+    gap:15px;
+    width:100%;
+    justify-content:space-between;
+  }
+  .nav-links a {font-size:11px}
+  .nav-contact {padding:8px 10px}
+  .hero-grid {padding:65px 0}
+  .hero h1 {
+    letter-spacing:-2px;
+    font-size:43px;
+  }
+  .hero-description {font-size:14px}
+  .hero-actions {align-items:stretch}
+  .visual {min-height:495px}
+  .phone {transform:rotate(2deg)}
+  .visual-ring {width:330px;height:330px}
+  .visual-glow {width:340px;height:340px}
+  .visual-caption {right:0;bottom:0}
+  .section {padding:70px 0}
+  .feature-grid {grid-template-columns:1fr}
+  .project-head {display:block}
+  .project-status {margin-top:13px}
+  .project-bottom {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .about-grid {grid-template-columns:1fr}
+  .about-panel {padding:32px}
+  .contact-section {padding:75px 0}
+  .footer-inner {flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  html {scroll-behavior:auto}
+  .feature-card,.btn {transition:none}
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>OINKZILLA STUDIOS</h1>
-    <p>Desarrollo de aplicaciones y soluciones digitales</p>
-  </header>
 
-  <main>
-    <section class="card">
-      <h2>Bienvenido a OINKZILLA STUDIOS</h2>
-      <p>
-        Somos un estudio independiente dedicado al
-        desarrollo de aplicaciones, herramientas
-        digitales y videojuegos.
-      </p>
-    </section>
+<header class="navbar">
+  <nav class="container nav-inner" aria-label="Navegación principal">
+    <a href="#inicio" class="logo" aria-label="OINKZILLA STUDIOS — Inicio">
+      <span class="logo-main">OINK<span>ZILLA</span></span>
+      <span class="logo-small">STUDIOS</span>
+    </a>
 
-    <section class="card">
-      <span class="tag">Aplicación Android</span>
-      <h2>StockFlow</h2>
-      <p>
-        StockFlow es una aplicación diseñada para
-        ayudar a pequeños negocios a gestionar
-        sus productos, inventario, ventas,
-        clientes y operaciones comerciales.
-      </p>
-      <p>
-        Actualmente estamos preparando su
-        lanzamiento en Google Play.
-      </p>
-      <a class="button" href="privacidad-stockflow.html">
-        Política de privacidad de StockFlow
-      </a>
-    </section>
+    <div class="nav-links">
+      <a href="#stockflow">StockFlow</a>
+      <a href="#nosotros">El estudio</a>
+      <a href="privacidad-stockflow.html">Privacidad</a>
+      <a href="#contacto" class="nav-contact">Contacto</a>
+    </div>
+  </nav>
+</header>
 
-    <section class="card">
-      <h2>Contacto y soporte</h2>
-      <p>
-        Para consultas sobre nuestras aplicaciones,
-        asistencia técnica o privacidad:
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <i aria-hidden="true"></i>
+        Independent Software & Game Studio
+      </div>
+
+      <h1>
+        Grandes ideas.<br>
+        Software con
+        <span class="accent">personalidad.</span>
+      </h1>
+
+      <p class="hero-description">
+        En OINKZILLA STUDIOS creamos aplicaciones,
+        herramientas digitales y experiencias
+        que combinan diseño, tecnología
+        y funcionalidad.
+        Nuestro objetivo es convertir problemas
+        cotidianos en soluciones útiles.
       </p>
-      <p>
-        <a href="mailto:oinkzillasupport@gmail.com">
-          oinkzillasupport@gmail.com
+
+      <div class="hero-actions">
+        <a href="#stockflow" class="btn btn-primary">
+          Conocer StockFlow <span aria-hidden="true">↗</span>
         </a>
-      </p>
-    </section>
-  </main>
+        <a href="#nosotros" class="btn btn-outline">
+          Conoce el estudio
+        </a>
+      </div>
 
-  <footer>
-    &copy; 2026 OINKZILLA STUDIOS.
-    Todos los derechos reservados.
-  </footer>
+      <p class="hero-note">
+        Desarrollo independiente · Aplicaciones Android · Videojuegos
+      </p>
+    </div>
+
+    <div class="visual" aria-label="Vista ilustrativa del diseño de StockFlow">
+      <div class="visual-glow"></div>
+      <div class="visual-ring"></div>
+
+      <div class="phone">
+        <div class="phone-screen">
+
+          <div class="phone-status">
+            <span>10:24</span>
+            <span>● ● ▰</span>
+          </div>
+
+          <div class="app-header">
+            <div class="app-name">Stock<span>Flow</span></div>
+            <div class="app-subtitle">Control de tu negocio</div>
+          </div>
+
+          <div class="app-content">
+
+            <div class="cash-card">
+              <div class="cash-top">
+                <span>Caja diaria</span>
+                <span class="cash-open">Abierta</span>
+              </div>
+              <div class="cash-value">Control de caja</div>
+              <div class="cash-caption">
+                Movimientos y efectivo esperado
+              </div>
+            </div>
+
+            <div class="mini-metrics">
+              <div class="mini-metric">
+                <small>Inventario</small>
+                <strong>Productos</strong>
+              </div>
+              <div class="mini-metric">
+                <small>Ventas</small>
+                <strong>Resumen</strong>
+              </div>
+            </div>
+
+            <div class="mini-list">
+              <h4>Accesos rápidos</h4>
+              <div class="mini-row">
+                <span>Registrar venta</span>
+                <span>↗</span>
+              </div>
+              <div class="mini-row">
+                <span>Agregar producto</span>
+                <span>↗</span>
+              </div>
+              <div class="mini-row">
+                <span>Ver reportes</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-nav">
+            <strong>Inicio</strong>
+            <span>Productos</span>
+            <span>Ventas</span>
+            <span>Más</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="visual-caption">
+        Vista ilustrativa de StockFlow
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section project-section" id="stockflow">
+  <div class="container">
+
+    <div class="project-head">
+      <div>
+        <div class="section-label">Nuestro proyecto destacado</div>
+        <h2 class="section-title">
+          Conoce StockFlow.
+        </h2>
+        <p class="section-description">
+          Una aplicación Android para ayudar a pequeños
+          negocios a organizar su inventario,
+          registrar ventas y gestionar sus
+          operaciones comerciales desde un solo lugar.
+        </p>
+      </div>
+      <div class="project-status">
+        En preparación para Google Play
+      </div>
+    </div>
+
+    <div class="feature-grid">
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">▣</div>
+        <h3>Inventario organizado</h3>
+        <p>
+          Administra tus productos, categorías,
+          existencias y alertas para tener
+          mayor control del inventario.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">↗</div>
+        <h3>Ventas y caja diaria</h3>
+        <p>
+          Registra operaciones comerciales,
+          consulta movimientos y administra
+          el efectivo esperado de tu negocio.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">▤</div>
+        <h3>Reportes y comprobantes</h3>
+        <p>
+          Consulta información comercial,
+          genera comprobantes y utiliza
+          opciones de impresión y exportación.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="project-bottom">
+      <div>
+        <strong>StockFlow para Android</strong>
+        <p>
+          Conoce cómo tratamos los datos
+          utilizados por la aplicación.
+        </p>
+      </div>
+      <a href="privacidad-stockflow.html">
+        Leer política de privacidad →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section about-section" id="nosotros">
+  <div class="container about-grid">
+
+    <div>
+      <div class="section-label">Sobre nuestro estudio</div>
+      <h2 class="section-title">
+        Tecnología con identidad propia.
+      </h2>
+      <p class="section-description">
+        OINKZILLA STUDIOS es un estudio independiente
+        de desarrollo de software y videojuegos.
+        Trabajamos en productos que buscan ser
+        funcionales, accesibles y visualmente atractivos.
+      </p>
+      <p class="section-description">
+        StockFlow es uno de nuestros proyectos:
+        una herramienta pensada para simplificar
+        tareas comerciales del día a día.
+      </p>
+    </div>
+
+    <div class="about-panel">
+      <div class="big-symbol" aria-hidden="true">✦</div>
+      <p>
+        Creamos experiencias digitales
+        que combinan utilidad,
+        creatividad y personalidad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contacto">
+  <div class="container">
+
+    <div class="section-label">
+      Estamos en contacto
+    </div>
+
+    <h2 class="section-title">
+      ¿Necesitas ayuda con StockFlow?
+    </h2>
+
+    <p>
+      Para consultas, asistencia técnica
+      o preguntas relacionadas con nuestras
+      aplicaciones, puedes escribirnos
+      directamente al correo oficial del estudio.
+    </p>
+
+    <a class="btn btn-primary"
+       href="mailto:oinkzillasupport@gmail.com">
+      Contactar soporte ↗
+    </a>
+
+    <a class="contact-email"
+       href="mailto:oinkzillasupport@gmail.com">
+      oinkzillasupport@gmail.com
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">
+        OINK<span>ZILLA</span> STUDIOS
+      </div>
+      <small>
+        © 2026 OINKZILLA STUDIOS. Todos los derechos reservados.
+      </small>
+    </div>
+
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="privacidad-stockflow.html">Privacidad</a>
+      <a href="mailto:oinkzillasupport@gmail.com">Soporte</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
