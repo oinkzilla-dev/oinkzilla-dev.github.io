@@ -1,129 +1,1000 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Política de privacidad de StockFlow, una aplicación Android de OINKZILLA STUDIOS.">
-  <title>Política de privacidad de StockFlow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10243A">
+  <meta name="description" content="Política de privacidad oficial de StockFlow, aplicación de OINKZILLA STUDIOS.">
+
+  <title>Política de privacidad | StockFlow — OINKZILLA STUDIOS</title>
+
   <style>
     :root {
-      --navy: #10243a;
-      --emerald: #10b981;
-      --mint: #e3fff5;
-      --bg: #f4f7fb;
-      --border: #dce5ed;
-      --body: #34465a;
-      --link: #076049;
+      --navy: #10243A;
+      --navy-deep: #091827;
+      --green: #10B981;
+      --green-dark: #087856;
+      --green-light: #E5F8F0;
+      --background: #F5F7FA;
+      --white: #FFFFFF;
+      --text: #20354A;
+      --muted: #607186;
+      --border: #E3E9EF;
+      --shadow: 0 10px 35px rgba(16,36,58,.045);
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--navy); font: 1rem/1.65 system-ui, sans-serif; }
-    a { color: var(--link); text-underline-offset: .2em; overflow-wrap: anywhere; }
-    a:focus-visible { outline: 3px solid var(--emerald); outline-offset: 4px; }
-    a:hover { text-decoration-thickness: 2px; }
-    .wrap { width: min(70rem, calc(100% - 3rem)); margin-inline: auto; }
-    .skip { position: absolute; z-index: 1; top: .75rem; left: .75rem; padding: .5rem 1rem; background: white; transform: translateY(-200%); }
-    .skip:focus { transform: none; }
-    header { background: radial-gradient(ellipse at top right, #14413f, transparent 60%), var(--navy); color: white; border-bottom: 4px solid var(--emerald); }
-    .brand { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; padding-block: 1.2rem; border-bottom: 1px solid #ffffff30; }
-    .brand strong { font-size: 1.4rem; letter-spacing: -.04em; }
-    .brand span { color: var(--emerald); }
-    .brand small { color: #e0ebf2; font-size: .73rem; font-weight: 700; letter-spacing: .09em; }
-    .intro { padding-block: clamp(2rem, 6vw, 4.5rem); }
-    h1, h2, p { margin: 0; }
-    h1 { max-width: 20ch; font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.08; letter-spacing: -.045em; }
-    .intro p { max-width: 64ch; margin-top: 1rem; color: #e0ebf2; }
-    .layout { display: grid; grid-template-columns: 15rem minmax(0, 1fr); align-items: start; gap: 1.75rem; padding-block: 2rem 3rem; }
-    nav, article { border: 1px solid var(--border); border-radius: 1rem; background: white; }
-    nav { position: sticky; top: 1.25rem; padding: 1rem; }
-    nav h2 { padding-inline: .65rem; font-size: 1rem; }
-    nav ul { display: grid; gap: .125rem; margin: .5rem 0 0; padding: 0; list-style: none; }
-    nav a { display: block; border-radius: .5rem; padding: .5rem .65rem; font-size: .9rem; }
-    nav a:hover { background: var(--mint); }
-    article { padding: clamp(1.15rem, 4vw, 3rem); }
-    section { scroll-margin-top: 1.25rem; }
-    section + section { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
-    section h2 { margin-bottom: .6rem; font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.25; letter-spacing: -.02em; }
-    section p { max-width: 72ch; color: var(--body); }
-    section p + p { margin-top: .8rem; }
-    #contacto { padding: 1.15rem; border: 1px solid #bdebdc; border-radius: .75rem; background: var(--mint); }
-    @media (max-width: 48rem) {
-      .wrap { width: calc(100% - 2rem); }
-      .layout { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-block: 1rem 2rem; }
-      nav { position: static; }
-      nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    * {
+      box-sizing: border-box;
     }
-    @media (max-width: 23rem) {
-      nav ul { grid-template-columns: minmax(0, 1fr); }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--green-dark);
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -100px;
+      z-index: 100;
+      background: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .brand-symbol {
+      width: 41px;
+      height: 41px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.06);
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.7px;
+      line-height: 1.2;
+    }
+
+    .brand-name span {
+      color: var(--green);
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #AABECB;
+      margin-top: 4px;
+    }
+
+    .home-link {
+      color: #D9E5EF;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 10px;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .home-link:hover {
+      background: rgba(255,255,255,.09);
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      background: linear-gradient(125deg, #10243A, #143E43 90%);
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      right: -140px;
+      top: -190px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+        rgba(16,185,129,.21), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(
+        rgba(255,255,255,.13) 1px,
+        transparent 1px
+      );
+      background-size: 25px 25px;
+      opacity: .13;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding-top: 75px;
+      padding-bottom: 95px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #A8F0D4;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 23px;
+      height: 2px;
+      background: var(--green);
+    }
+
+    .hero h1 {
+      max-width: 790px;
+      margin: 0;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 800;
+      letter-spacing: -2.5px;
+      line-height: 1.12;
+    }
+
+    .hero h1 span {
+      color: #55E4B0;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin: 22px 0 0;
+      font-size: 16px;
+      line-height: 1.85;
+      color: #CEDCE5;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .meta-pill {
+      padding: 8px 14px;
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: #DBEAEF;
+      font-size: 12px;
+      background: rgba(255,255,255,.055);
+    }
+
+    /* MAIN LAYOUT */
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 252px minmax(0,1fr);
+      gap: 28px;
+      align-items: start;
+      margin-top: -38px;
+      padding-bottom: 65px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 25px 17px;
+    }
+
+    .sidebar-heading {
+      padding: 0 12px;
+      margin: 0 0 17px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sidebar ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      gap: 4px;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      font-size: 13px;
+      color: #4D6275;
+      font-weight: 600;
+      border-radius: 9px;
+      padding: 11px 12px;
+      transition: .2s;
+    }
+
+    .sidebar a:hover,
+    .sidebar a:focus-visible {
+      background: var(--green-light);
+      color: var(--green-dark);
+    }
+
+    .sidebar-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 22px;
+      padding: 19px 12px 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .sidebar-footer strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    /* ARTICLES */
+
+    .document {
+      display: grid;
+      gap: 17px;
+      min-width: 0;
+    }
+
+    .intro-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 31px 36px;
+    }
+
+    .intro-card h2 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: -.5px;
+      margin: 0 0 12px;
+    }
+
+    .intro-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .section-card {
+      background: white;
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 25px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .section-card:target {
+      border-color: #72DDB6;
+      box-shadow: 0 0 0 3px rgba(16,185,129,.08);
+    }
+
+    .section-header {
+      display: flex;
+      gap: 17px;
+      align-items: flex-start;
+      margin-bottom: 23px;
+    }
+
+    .section-number {
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--green-light);
+      color: var(--green-dark);
+      border: 1px solid #CEF0E2;
+      border-radius: 13px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .section-label {
+      margin: 0 0 4px;
+      color: var(--green-dark);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+    }
+
+    .section-card h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(19px, 2.2vw, 24px);
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -.7px;
+    }
+
+    .section-card p {
+      margin: 0 0 16px;
+      color: #42556A;
+      line-height: 1.95;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CONTACT */
+
+    .contact-card {
+      background: linear-gradient(135deg,
+        #10243A, #16443F);
+      border-radius: 18px;
+      padding: 37px;
+      color: white;
+      scroll-margin-top: 25px;
+    }
+
+    .contact-card .section-number {
+      background: rgba(16,185,129,.18);
+      border-color: rgba(16,185,129,.25);
+      color: #77F0C1;
+    }
+
+    .contact-card .section-label {
+      color: #7EEAC2;
+    }
+
+    .contact-card h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.3;
+      color: white;
+    }
+
+    .contact-card p {
+      color: #DAE7E9;
+      font-size: 14px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .contact-card a {
+      color: #8CF4CE;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #0B1928;
+      color: #AFC1CE;
+      padding: 33px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .footer-inner p {
+      margin: 4px 0 0;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      color: #BDCED8;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #7CEBC1;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 860px) {
+      .content-layout {
+        grid-template-columns: 1fr;
+        margin-top: -25px;
+        gap: 18px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .sidebar ul {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .sidebar-footer {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+      }
+
+      .brand-subtitle {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .brand-symbol {
+        width: 36px;
+        height: 36px;
+      }
+
+      .home-link {
+        font-size: 11px;
+        padding: 8px;
+      }
+
+      .hero-inner {
+        padding-top: 49px;
+        padding-bottom: 69px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .sidebar {
+        padding: 19px 13px;
+      }
+
+      .sidebar ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+      }
+
+      .sidebar a {
+        font-size: 11px;
+        padding: 9px;
+      }
+
+      .intro-card,
+      .section-card,
+      .contact-card {
+        padding: 24px 20px;
+        border-radius: 15px;
+      }
+
+      .section-header {
+        gap: 12px;
+      }
+
+      .section-number {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+      }
+
+      .section-card h2,
+      .contact-card h2 {
+        font-size: 20px;
+      }
+
+      .section-card p {
+        font-size: 13.5px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
+
 <body>
-  <a class="skip" href="#politica">Saltar al contenido de la política</a>
-  <header>
-    <div class="wrap">
-      <div class="brand">
-        <strong>Stock<span>Flow</span></strong>
-        <small>OINKZILLA STUDIOS</small>
+
+<a class="skip-link" href="#contenido">
+  Saltar al contenido
+</a>
+
+<!-- HEADER -->
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="/" class="brand" aria-label="Ir al inicio de OINKZILLA STUDIOS">
+      <div class="brand-symbol" aria-hidden="true">
+        <svg width="27" height="27" viewBox="0 0 32 32"
+             fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3L28 10V23L16 30L4 23V10L16 3Z"
+                stroke="#FFFFFF" stroke-width="2.3"
+                stroke-linejoin="round"/>
+          <path d="M4 10L16 17L28 10"
+                stroke="#FFFFFF" stroke-width="2.3"/>
+          <path d="M16 17V30"
+                stroke="#10B981" stroke-width="3"/>
+        </svg>
       </div>
-      <div class="intro">
-        <h1>Política de privacidad de StockFlow</h1>
-        <p>StockFlow es una aplicación Android desarrollada por OINKZILLA STUDIOS para gestionar el inventario, las ventas y la caja de un negocio. Esta política explica cómo se tratan los datos al usar la aplicación.</p>
+      <div>
+        <span class="brand-name">
+          Stock<span>Flow</span>
+        </span>
+        <small class="brand-subtitle">OINKZILLA STUDIOS</small>
       </div>
+    </a>
+
+    <a class="home-link" href="/">
+      ← Volver al inicio
+    </a>
+
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container hero-inner">
+
+    <div class="eyebrow">
+      Privacidad y transparencia
     </div>
-  </header>
-  <main class="wrap layout">
-    <nav aria-labelledby="contenido">
-      <h2 id="contenido">En esta página</h2>
+
+    <h1>
+      Tu negocio.<br>
+      Tus datos. <span>Tu control.</span>
+    </h1>
+
+    <p class="hero-description">
+      Política de privacidad de StockFlow, una aplicación
+      Android de OINKZILLA STUDIOS. Conoce cómo se utilizan,
+      almacenan y protegen los datos relacionados con
+      el funcionamiento de la aplicación.
+    </p>
+
+    <div class="hero-meta">
+      <span class="meta-pill">Política de privacidad</span>
+      <span class="meta-pill">Aplicación Android</span>
+      <span class="meta-pill">OINKZILLA STUDIOS</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- DOCUMENTO -->
+
+<main id="contenido" class="container content-layout">
+
+  <aside class="sidebar">
+    <h2 class="sidebar-heading">Contenido de la política</h2>
+
+    <nav aria-label="Secciones de la política">
       <ul>
-        <li><a href="#datos-del-negocio">Datos del negocio</a></li>
-        <li><a href="#camara-y-fotos">Cámara y fotos</a></li>
-        <li><a href="#open-food-facts">Open Food Facts</a></li>
-        <li><a href="#publicidad">Publicidad y privacidad</a></li>
-        <li><a href="#suscripciones">Suscripciones</a></li>
-        <li><a href="#impresion-y-respaldos">Impresión y respaldos</a></li>
-        <li><a href="#seguridad">Seguridad y eliminación</a></li>
-        <li><a href="#contacto">Contacto y cambios</a></li>
+        <li><a href="#datos-del-negocio">01 · Datos del negocio</a></li>
+        <li><a href="#camara-y-fotos">02 · Cámara y fotografías</a></li>
+        <li><a href="#open-food-facts">03 · Open Food Facts</a></li>
+        <li><a href="#publicidad">04 · Publicidad y privacidad</a></li>
+        <li><a href="#suscripciones">05 · Suscripciones</a></li>
+        <li><a href="#impresion-y-respaldos">06 · Impresión y respaldos</a></li>
+        <li><a href="#seguridad">07 · Seguridad y eliminación</a></li>
+        <li><a href="#contacto">08 · Contacto y cambios</a></li>
       </ul>
     </nav>
-    <article id="politica" tabindex="-1" aria-label="Política de privacidad">
-        <section id="datos-del-negocio">
+
+    <div class="sidebar-footer">
+      <strong>Documento oficial</strong>
+      Política de privacidad de StockFlow,
+      desarrollado por OINKZILLA STUDIOS.
+    </div>
+  </aside>
+
+  <div class="document">
+
+    <div class="intro-card">
+      <h2>Acerca de esta política</h2>
+      <p>
+        StockFlow es una aplicación Android desarrollada por
+        OINKZILLA STUDIOS para gestionar el inventario,
+        las ventas y la caja de un negocio.
+        Esta política explica cómo se tratan los datos
+        al usar la aplicación.
+      </p>
+    </div>
+
+    <!-- 01 -->
+
+    <section class="section-card" id="datos-del-negocio">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <div>
+          <div class="section-label">Almacenamiento local</div>
           <h2>Datos del negocio almacenados en el dispositivo</h2>
-          <p>StockFlow guarda los datos que introduces para administrar tu negocio: su nombre, teléfono, dirección, logotipo y preferencias, además del inventario, precios, fotos, ventas, compras, caja, cuentas por cobrar y abonos. Si registras clientes o proveedores, sus fichas pueden incluir nombre, teléfono, correo, dirección, identificación y notas.</p>
-          <p>StockFlow conserva estos registros en la base de datos y el almacenamiento privado de la app. Se usan para operar el negocio, mantener el historial y generar reportes y comprobantes. StockFlow funciona sin una cuenta propia o sincronización comercial con servidores del desarrollador. Los métodos de pago, importes y referencias que anotas sirven para llevar el historial. La app no solicita números de tarjetas ni procesa estos pagos bancarios.</p>
-        </section>
-        <section id="camara-y-fotos">
+        </div>
+      </div>
+
+      <p>
+        StockFlow guarda los datos que introduces para
+        administrar tu negocio: su nombre, teléfono,
+        dirección, logotipo y preferencias, además del
+        inventario, precios, fotos, ventas, compras,
+        caja, cuentas por cobrar y abonos.
+        Si registras clientes o proveedores, sus fichas
+        pueden incluir nombre, teléfono, correo, dirección,
+        identificación y notas.
+      </p>
+
+      <p>
+        StockFlow conserva estos registros en la base de
+        datos y el almacenamiento privado de la app.
+        Se usan para operar el negocio, mantener el
+        historial y generar reportes y comprobantes.
+        StockFlow funciona sin una cuenta propia o
+        sincronización comercial con servidores del
+        desarrollador. Los métodos de pago, importes y
+        referencias que anotas sirven para llevar el
+        historial. La app no solicita números de tarjetas
+        ni procesa estos pagos bancarios.
+      </p>
+    </section>
+
+    <!-- 02 -->
+
+    <section class="section-card" id="camara-y-fotos">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <div>
+          <div class="section-label">Funciones del dispositivo</div>
           <h2>Cámara, fotos y códigos de barras</h2>
-          <p>La cámara se usa cuando eliges tomar una foto o escanear un código. También puedes seleccionar una imagen desde el selector de Android. La aplicación guarda las imágenes que decides usar como foto de producto o logotipo. El lector de Google ML Kit procesa la imagen del código en el dispositivo. Según su documentación, el SDK puede procesar información técnica sobre la aplicación, el dispositivo, el uso del lector y los errores para diagnóstico.</p>
-        </section>
-        <section id="open-food-facts">
+        </div>
+      </div>
+
+      <p>
+        La cámara se usa cuando eliges tomar una foto
+        o escanear un código. También puedes seleccionar
+        una imagen desde el selector de Android.
+        La aplicación guarda las imágenes que decides
+        usar como foto de producto o logotipo.
+        El lector de Google ML Kit procesa la imagen
+        del código en el dispositivo.
+        Según su documentación, el SDK puede procesar
+        información técnica sobre la aplicación,
+        el dispositivo, el uso del lector y los errores
+        para diagnóstico.
+      </p>
+    </section>
+
+    <!-- 03 -->
+
+    <section class="section-card" id="open-food-facts">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <div>
+          <div class="section-label">Consultas externas</div>
           <h2>Consultas en Open Food Facts</h2>
-          <p>Cuando habilitas y solicitas una búsqueda en línea, StockFlow consulta Open Food Facts por HTTPS. El servicio recibe el código de barras o nombre buscado, los datos de conexión y el correo que configuraste para identificar las consultas junto con la versión de la app. La búsqueda por nombre envía también la preferencia de idioma. Si existe una foto disponible, StockFlow puede descargarla. Los registros de clientes, ventas y precios quedan fuera de estas solicitudes.</p>
-          <p>Puedes desactivar la fuente desde Catálogo y búsqueda de productos y quitar el correo de consultas desde Más. El registro manual y la búsqueda en el inventario del dispositivo siguen disponibles.</p>
-        </section>
-        <section id="publicidad">
+        </div>
+      </div>
+
+      <p>
+        Cuando habilitas y solicitas una búsqueda en línea,
+        StockFlow consulta Open Food Facts por HTTPS.
+        El servicio recibe el código de barras o nombre
+        buscado, los datos de conexión y el correo que
+        configuraste para identificar las consultas junto
+        con la versión de la app.
+        La búsqueda por nombre envía también la preferencia
+        de idioma. Si existe una foto disponible, StockFlow
+        puede descargarla. Los registros de clientes,
+        ventas y precios quedan fuera de estas solicitudes.
+      </p>
+
+      <p>
+        Puedes desactivar la fuente desde Catálogo y
+        búsqueda de productos y quitar el correo de
+        consultas desde Más. El registro manual y
+        la búsqueda en el inventario del dispositivo
+        siguen disponibles.
+      </p>
+    </section>
+
+    <!-- 04 -->
+
+    <section class="section-card" id="publicidad">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <div>
+          <div class="section-label">Servicios de Google</div>
           <h2>Publicidad y opciones de privacidad</h2>
-          <p>Cuando la publicidad está habilitada, el plan Gratis puede mostrar banners de Google AdMob en Inicio y en el resumen de Reportes. Google User Messaging Platform (UMP) administra el consentimiento y otras opciones aplicables. Cuando Google ofrece controles adicionales, puedes abrirlos en Más, dentro de Privacidad y datos. Las solicitudes de banners se realizan cuando el estado de privacidad lo permite. StockFlow suprime las solicitudes para los usuarios con acceso Pro verificado.</p>
-          <p>Según los servicios y las opciones aplicables, Google puede tratar la dirección IP, la ubicación aproximada derivada de esa dirección, interacciones con la app o los anuncios, diagnósticos e identificadores del dispositivo o del servicio. Estos datos se usan para la publicidad, la medición, el funcionamiento del servicio y la prevención del fraude. StockFlow excluye el permiso de Android para el identificador publicitario y deja los datos comerciales, las fotos y la información de los clientes fuera de las solicitudes de anuncios.</p>
-        </section>
-        <section id="suscripciones">
+        </div>
+      </div>
+
+      <p>
+        Cuando la publicidad está habilitada,
+        el plan Gratis puede mostrar banners de
+        Google AdMob en Inicio y en el resumen de Reportes.
+        Google User Messaging Platform (UMP) administra
+        el consentimiento y otras opciones aplicables.
+        Cuando Google ofrece controles adicionales,
+        puedes abrirlos en Más, dentro de Privacidad
+        y datos. Las solicitudes de banners se realizan
+        cuando el estado de privacidad lo permite.
+        StockFlow suprime las solicitudes para los
+        usuarios con acceso Pro verificado.
+      </p>
+
+      <p>
+        Según los servicios y las opciones aplicables,
+        Google puede tratar la dirección IP, la ubicación
+        aproximada derivada de esa dirección, interacciones
+        con la app o los anuncios, diagnósticos e
+        identificadores del dispositivo o del servicio.
+        Estos datos se usan para la publicidad, la medición,
+        el funcionamiento del servicio y la prevención
+        del fraude. StockFlow excluye el permiso de Android
+        para el identificador publicitario y deja los datos
+        comerciales, las fotos y la información de los
+        clientes fuera de las solicitudes de anuncios.
+      </p>
+    </section>
+
+    <!-- 05 -->
+
+    <section class="section-card" id="suscripciones">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <div>
+          <div class="section-label">Servicios premium</div>
           <h2>Suscripciones de Google Play</h2>
-          <p>La versión descrita por esta política muestra información sobre los planes. La contratación y la restauración mediante Google Play Billing están desactivadas en esta versión. StockFlow no envía tokens de compra a un servidor de suscripciones en esta versión.</p>
-        </section>
-        <section id="impresion-y-respaldos">
+        </div>
+      </div>
+
+      <p>
+        La versión descrita por esta política muestra
+        información sobre los planes. La contratación
+        y la restauración mediante Google Play Billing
+        están desactivadas en esta versión. StockFlow
+        no envía tokens de compra a un servidor de
+        suscripciones en esta versión.
+      </p>
+    </section>
+
+    <!-- 06 -->
+
+    <section class="section-card" id="impresion-y-respaldos">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <div>
+          <div class="section-label">Archivos y documentos</div>
           <h2>Impresión, exportaciones y respaldos</h2>
-          <p>Si decides imprimir, StockFlow envía el contenido del documento a la impresora Bluetooth que selecciones. Los comprobantes pueden incluir datos del negocio, del cliente y de la operación. Si guardas o compartes reportes, comprobantes, recordatorios o respaldos, tú eliges la aplicación o destino que recibe el archivo o sus datos. Si eliges un servicio de almacenamiento o mensajería de terceros, el tratamiento de esa copia depende de ese servicio.</p>
-          <p>Los respaldos JSON pueden incluir datos comerciales y configuraciones sin cifrar. Guárdalos en un lugar bajo tu control. Antes de restaurar un respaldo, StockFlow valida el archivo y conserva una copia local previa para recuperación.</p>
-        </section>
-        <section id="seguridad">
+        </div>
+      </div>
+
+      <p>
+        Si decides imprimir, StockFlow envía el contenido
+        del documento a la impresora Bluetooth que
+        selecciones. Los comprobantes pueden incluir
+        datos del negocio, del cliente y de la operación.
+        Si guardas o compartes reportes, comprobantes,
+        recordatorios o respaldos, tú eliges la aplicación
+        o destino que recibe el archivo o sus datos.
+        Si eliges un servicio de almacenamiento o mensajería
+        de terceros, el tratamiento de esa copia depende
+        de ese servicio.
+      </p>
+
+      <p>
+        Los respaldos JSON pueden incluir datos comerciales
+        y configuraciones sin cifrar. Guárdalos en un lugar
+        bajo tu control. Antes de restaurar un respaldo,
+        StockFlow valida el archivo y conserva una copia
+        local previa para recuperación.
+      </p>
+    </section>
+
+    <!-- 07 -->
+
+    <section class="section-card" id="seguridad">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <div>
+          <div class="section-label">Control de información</div>
           <h2>Seguridad, conservación y eliminación</h2>
-          <p>StockFlow utiliza el almacenamiento privado de Android para los registros, las preferencias y sus archivos de trabajo. Las consultas al catálogo usan HTTPS. Los registros se conservan en el dispositivo hasta que los eliminas, los reemplazas al restaurar un respaldo o borras los datos de StockFlow. Algunos registros desactivados permanecen vinculados al historial comercial. Los archivos temporales para compartir se guardan en la caché de la app.</p>
-          <p>Puedes borrar los datos locales de StockFlow desde los ajustes de Android, incluida la copia de recuperación local. Los documentos y respaldos que ya exportaste o compartiste se administran y eliminan desde su destino. En el caso de los datos de un cliente o proveedor almacenados por un negocio, puedes solicitar su revisión al negocio que mantiene el registro.</p>
-        </section>
-        <section id="contacto">
+        </div>
+      </div>
+
+      <p>
+        StockFlow utiliza el almacenamiento privado
+        de Android para los registros, las preferencias
+        y sus archivos de trabajo. Las consultas al
+        catálogo usan HTTPS. Los registros se conservan
+        en el dispositivo hasta que los eliminas,
+        los reemplazas al restaurar un respaldo o
+        borras los datos de StockFlow.
+        Algunos registros desactivados permanecen
+        vinculados al historial comercial.
+        Los archivos temporales para compartir se
+        guardan en la caché de la app.
+      </p>
+
+      <p>
+        Puedes borrar los datos locales de StockFlow
+        desde los ajustes de Android, incluida la copia
+        de recuperación local. Los documentos y respaldos
+        que ya exportaste o compartiste se administran
+        y eliminan desde su destino.
+        En el caso de los datos de un cliente o proveedor
+        almacenados por un negocio, puedes solicitar
+        su revisión al negocio que mantiene el registro.
+      </p>
+    </section>
+
+    <!-- 08 -->
+
+    <section class="contact-card" id="contacto">
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <div>
+          <div class="section-label">Contacto oficial</div>
           <h2>Contacto y cambios a esta política</h2>
-          <p>Para consultas de privacidad, escribe a OINKZILLA STUDIOS en <a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a>. Si cambia el tratamiento de datos, OINKZILLA STUDIOS actualizará esta política y la información de privacidad de la aplicación.</p>
-        </section>
-    </article>
-  </main>
+        </div>
+      </div>
+
+      <p>
+        Para consultas de privacidad, escribe a
+        OINKZILLA STUDIOS en
+        <a href="mailto:oinkzillasupport@gmail.com">
+          oinkzillasupport@gmail.com
+        </a>.
+        Si cambia el tratamiento de datos,
+        OINKZILLA STUDIOS actualizará esta política
+        y la información de privacidad de la aplicación.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">OINKZILLA STUDIOS</div>
+      <p>© 2026 OINKZILLA STUDIOS. Todos los derechos reservados.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="#contenido">Volver al contenido ↑</a>
+      <a href="mailto:oinkzillasupport@gmail.com">Soporte</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
+
