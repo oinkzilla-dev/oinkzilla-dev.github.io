@@ -8,7 +8,7 @@
 
 <title>OINKZILLA STUDIOS | Aplicaciones y videojuegos</title>
 
-<meta name="description" content="OINKZILLA STUDIOS es un estudio independiente de aplicaciones, videojuegos y soluciones digitales. Conoce StockFlow.">
+<meta name="description" content="OINKZILLA STUDIOS es un estudio independiente de aplicaciones, videojuegos y soluciones digitales. Conoce StockOink.">
 
 <!-- LOGO EN LA PESTAÑA DEL NAVEGADOR -->
 <link rel="icon" type="image/png" href="oinkzilla-logo.png">
@@ -883,6 +883,26 @@ footer {
     transition: none;
   }
 }
+
+/* Identidad de StockOink, separada de la marca del estudio */
+.product-identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.product-identity img {
+  width: 76px;
+  height: 76px;
+  border-radius: 17px;
+  object-fit: contain;
+  box-shadow: 0 8px 25px rgba(16,36,58,.13);
+}
+.product-identity .section-title { margin: 0; }
+@media (max-width:760px) {
+  .product-identity img { width: 64px; height: 64px; }
+}
+
 </style>
 </head>
 
@@ -914,7 +934,7 @@ footer {
     </a>
 
     <div class="nav-links">
-      <a href="#stockflow">StockFlow</a>
+      <a href="#stockoink">StockOink</a>
       <a href="#nosotros">El estudio</a>
       <a href="privacidad-stockflow.html">Privacidad</a>
       <a href="#contacto" class="nav-contact">Contacto</a>
@@ -951,9 +971,9 @@ footer {
 
       <div class="hero-actions">
 
-        <a href="#stockflow"
+        <a href="#stockoink"
            class="button button-primary">
-          Conocer StockFlow →
+          Descubre StockOink →
         </a>
 
         <a href="#nosotros"
@@ -971,7 +991,7 @@ footer {
 
     </div>
 
-    <!-- TELÉFONO CON CAPTURA REAL -->
+    <!-- TELÉFONO: nueva captura pendiente; si falta, mostrar icono oficial -->
 
     <div class="device-stage">
 
@@ -983,8 +1003,9 @@ footer {
 
       <div class="phone">
         <img
-          src="stockflow-inicio.png"
-          alt="Pantalla real de StockFlow con Caja diaria, resumen de ventas, productos y reportes"
+          src="stockoink-inicio.png"
+          onerror="this.onerror=null;this.src='stockoink-icon.png';"
+          alt="StockOink, aplicación de inventario y ventas para pequeños negocios"
           fetchpriority="high">
       </div>
 
@@ -993,9 +1014,10 @@ footer {
   </div>
 </section>
 
-<!-- STOCKFLOW -->
+<!-- STOCKOINK (conservar ancla heredada para enlaces existentes) -->
 
-<section class="section project-section" id="stockflow">
+<section class="section project-section" id="stockoink">
+  <span id="stockflow" aria-hidden="true"></span>
   <div class="container">
 
     <div class="project-header">
@@ -1005,9 +1027,10 @@ footer {
           Nuestro proyecto destacado
         </div>
 
-        <h2 class="section-title">
-          Conoce StockFlow.
-        </h2>
+        <div class="product-identity">
+          <img src="stockoink-icon.png" alt="Icono oficial de StockOink: cerdito rosa con gráfico de barras verde" width="76" height="76" loading="lazy">
+          <h2 class="section-title">Conoce StockOink.</h2>
+        </div>
 
         <p class="section-description">
           Una aplicación Android diseñada para ayudar
@@ -1019,7 +1042,7 @@ footer {
       </div>
 
       <div class="project-status">
-        En preparación para Google Play
+        En prueba cerrada en Google Play
       </div>
 
     </div>
@@ -1060,7 +1083,7 @@ footer {
 
     <div class="project-footer">
       <div>
-        <strong>StockFlow para Android</strong>
+        <strong>StockOink — Inventario y Ventas</strong>
         <p>
           Consulta cómo tratamos los datos
           utilizados por la aplicación.
@@ -1099,7 +1122,7 @@ footer {
       </p>
 
       <p class="section-description">
-        StockFlow es uno de nuestros proyectos:
+        StockOink es uno de nuestros proyectos:
         una herramienta pensada para simplificar
         las tareas comerciales del día a día.
       </p>
@@ -1138,7 +1161,7 @@ footer {
     </div>
 
     <h2 class="section-title">
-      ¿Necesitas ayuda con StockFlow?
+      ¿Necesitas ayuda con StockOink?
     </h2>
 
     <p class="section-description">
