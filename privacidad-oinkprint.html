@@ -4,35 +4,142 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10243A"><meta name="description" content="Política de privacidad de OinkPrint de OINKZILLA STUDIOS: proyectos e imágenes locales, PDF y versión release sin publicidad.">
 <title>Privacidad de OinkPrint | OINKZILLA STUDIOS</title>
-<link rel="icon" href="assets/oinkprint/icono.png" type="image/png"><link rel="stylesheet" href="assets/oinkprint/oinkprint.css">
+<link rel="icon" href="assets/oinkprint/icono.png" type="image/png">
 <link rel="canonical" href="https://oinkzilla-dev.github.io/privacidad-oinkprint.html">
+<style>
+/* Estilos exclusivos de privacidad-oinkprint.html. Sin CSS compartido. */
+.op-privacy{--ink:#10243a;--accent:#10b981;--link:#087256;--muted:#53666c;--line:#dce5e3;--paper:#fff;--canvas:#f5f7f7;margin:0;background:var(--canvas);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
+.op-privacy *,.op-privacy *::before,.op-privacy *::after{box-sizing:border-box}
+.op-privacy a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;overflow-wrap:anywhere}
+.op-privacy a:hover{text-decoration-thickness:2px}
+.op-privacy :focus-visible{outline:3px solid var(--link);outline-offset:5px;border-radius:4px}
+.op-privacy .op-wrap{width:min(1120px,calc(100% - 64px));margin-inline:auto}
+.op-privacy .op-skip{position:absolute;left:20px;top:12px;padding:10px 18px;background:white;border:2px solid var(--link);border-radius:8px;z-index:10;transform:translateY(-160%);font-weight:650}
+.op-privacy .op-skip:focus{transform:none}
+.op-privacy .op-header{background:var(--ink);color:#fff;border-bottom:3px solid var(--accent)}
+.op-privacy .op-header-inner{min-height:104px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:20px}
+.op-privacy .op-brand{display:flex;align-items:center;gap:14px;min-width:0}
+.op-privacy .op-brand img{display:block;width:56px;height:56px;flex:none;border-radius:13px}
+.op-privacy .op-brand-text{display:grid;gap:2px}
+.op-privacy .op-brand-name{font-size:23px;font-weight:700;line-height:1.2;letter-spacing:-.4px}
+.op-privacy .op-studio{font-size:10px;line-height:1.5;letter-spacing:1.5px;color:#b9d7d3;font-weight:600}
+.op-privacy .op-back{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:8px 14px;border:1px solid #5c777f;border-radius:9px;color:#f4faf8;text-decoration:none;font-size:14px;font-weight:550;line-height:1.4;flex:none}
+.op-privacy .op-back:hover{background:#1d3b4c;border-color:#8ab4ae;text-decoration:none}
+.op-privacy .op-header :focus-visible{outline-color:#79edc2}
+.op-privacy .op-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;padding-block:50px 46px}
+.op-privacy .op-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;line-height:1.5;letter-spacing:1.8px;text-transform:uppercase;color:var(--link);margin:0 0 18px}
+.op-privacy .op-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.op-privacy h1{font-size:clamp(32px,3.6vw,46px);line-height:1.13;letter-spacing:-1.6px;font-weight:750;margin:0;max-width:18ch;text-wrap:balance}
+.op-privacy .op-updated{display:flex;align-items:center;gap:10px;margin:23px 0 0;color:var(--muted);font-size:13px;line-height:1.6;flex-wrap:wrap}
+.op-privacy .op-updated svg{flex:none;color:var(--link)}
+.op-privacy .op-updated strong{font-weight:600}
+.op-privacy .op-meta{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;padding:24px 0 24px 30px;border-left:1px solid #cedbd7;min-width:0}
+.op-privacy .op-meta div{min-width:0}
+.op-privacy .op-meta .op-meta-wide{grid-column:1/-1}
+.op-privacy .op-meta dt{color:var(--muted);font-size:11px;font-weight:650;line-height:1.5;letter-spacing:.7px;text-transform:uppercase;margin-bottom:4px}
+.op-privacy .op-meta dd{margin:0;font-size:14px;line-height:1.65;font-weight:550;overflow-wrap:anywhere}
+.op-privacy code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86em;overflow-wrap:anywhere}
+.op-privacy .op-document-grid{display:grid;grid-template-columns:248px minmax(0,1fr);gap:32px;align-items:start;padding-bottom:56px}
+.op-privacy .op-toc{position:sticky;top:24px;padding:8px 16px 16px 0;max-height:calc(100vh - 48px);overflow-y:auto;scrollbar-width:thin}
+.op-privacy .op-toc h2{margin:0 0 18px;padding-left:12px;color:var(--muted);font-size:11px;font-weight:700;line-height:1.6;letter-spacing:1.6px;text-transform:uppercase}
+.op-privacy .op-toc ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.op-privacy .op-toc a{display:flex;align-items:center;min-height:44px;padding:9px 12px;border-radius:8px;color:#40575e;font-size:13px;line-height:1.5;text-decoration:none}
+.op-privacy .op-toc a:hover{background:#e6efec;color:#075b45}
+.op-privacy .op-toc a:focus-visible{outline-offset:0}
+.op-privacy .op-toc-mobile{display:none}
+.op-privacy .op-article{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:36px 40px 32px;box-shadow:0 3px 14px #10243a03}
+.op-privacy .op-scope{padding:22px 24px;background:#eff8f3;border:1px solid #d2e8dc;border-left:3px solid var(--accent);border-radius:10px}
+.op-privacy .op-scope>strong{display:block;color:#075b45;font-size:14px;font-weight:700;line-height:1.5}
+.op-privacy .op-scope p{font-size:15px;line-height:1.85;color:#344f49;margin:10px 0 0}
+.op-privacy .op-section{padding-top:30px;margin-top:30px;border-top:1px solid #e5ebe9;scroll-margin-top:30px}
+.op-privacy .op-section h2{font-size:23px;font-weight:700;line-height:1.4;letter-spacing:-.5px;margin:0 0 18px;max-width:35ch}
+.op-privacy .op-section p,.op-privacy .op-section ul{font-size:16px;line-height:1.85;color:#354b54;max-width:73ch}
+.op-privacy .op-section p{margin:0 0 17px}
+.op-privacy .op-section p:last-child,.op-privacy .op-section ul:last-child{margin-bottom:0}
+.op-privacy .op-section ul{margin:0;padding-left:22px}
+.op-privacy .op-section li{padding-left:5px;margin:0 0 16px}
+.op-privacy .op-section li:last-child{margin-bottom:0}
+.op-privacy .op-section li::marker{color:var(--link)}
+.op-privacy .op-section strong{color:var(--ink);font-weight:650}
+.op-privacy .op-section:target h2{color:var(--link)}
+.op-privacy .op-article>nav{border-top:1px solid var(--line);margin-top:36px;padding-top:20px;display:flex;flex-wrap:wrap;gap:8px 22px}
+.op-privacy .op-article>nav a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;line-height:1.6}
+.op-privacy .op-footer{background:#edf2f1;border-top:1px solid #d9e3df;padding:30px 0 34px}
+.op-privacy .op-footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.op-privacy .op-footer-brand{display:grid;gap:3px}
+.op-privacy .op-footer-brand strong{font-size:17px;line-height:1.5;font-weight:700}
+.op-privacy .op-footer small{font-size:11px;line-height:1.8;color:var(--muted)}
+.op-privacy .op-footer-links{display:flex;gap:10px 28px;flex-wrap:wrap}
+.op-privacy .op-footer-links a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;line-height:1.6}
+@media(min-width:1500px){.op-privacy .op-wrap{width:1120px}}
+@media(max-width:1000px){.op-privacy .op-wrap{width:calc(100% - 48px)}.op-privacy .op-hero{gap:32px}.op-privacy .op-document-grid{grid-template-columns:220px minmax(0,1fr);gap:22px}.op-privacy .op-article{padding:28px}.op-privacy .op-meta{padding-left:24px}}
+@media(max-width:820px){.op-privacy .op-hero{grid-template-columns:1fr;gap:26px;padding-block:34px 30px}.op-privacy h1{max-width:23ch;font-size:38px}.op-privacy .op-meta{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px}.op-privacy .op-meta .op-meta-wide{grid-column:auto}.op-privacy .op-document-grid{display:block;padding-bottom:36px}.op-privacy .op-toc-desktop{display:none}.op-privacy .op-toc-mobile{display:block;position:static;max-height:none;padding:0;margin-bottom:20px;background:#eaf1ef;border:1px solid #d7e3dd;border-radius:11px;overflow:visible}.op-privacy .op-toc-mobile summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;cursor:pointer;padding:14px 18px;font-size:14px;font-weight:650;line-height:1.5}.op-privacy .op-toc-mobile summary::-webkit-details-marker{display:none}.op-privacy .op-toc-mobile summary::after{content:'+';font-size:23px;line-height:1;font-weight:400;color:var(--link)}.op-privacy .op-toc-mobile[open] summary::after{content:'−'}.op-privacy .op-toc-mobile nav{padding:0 8px 12px}.op-privacy .op-toc-mobile a{font-size:14px;min-height:44px}.op-privacy .op-footer-inner{align-items:flex-start}.op-privacy .op-footer-links{gap:0 22px}}
+@media(max-width:520px){.op-privacy .op-wrap{width:calc(100% - 32px)}.op-privacy .op-header-inner{min-height:0;padding-block:18px;gap:16px;flex-wrap:wrap}.op-privacy .op-brand img{width:48px;height:48px;border-radius:11px}.op-privacy .op-brand-name{font-size:21px}.op-privacy .op-studio{font-size:9px;letter-spacing:1.2px}.op-privacy .op-back{font-size:13px;min-height:44px;padding:8px 11px}.op-privacy .op-hero{padding-block:30px 24px;gap:22px}.op-privacy h1{font-size:34px;letter-spacing:-1px;max-width:19ch}.op-privacy .op-eyebrow{font-size:10px;margin-bottom:13px}.op-privacy .op-updated{margin-top:18px;font-size:12px;gap:8px}.op-privacy .op-meta{gap:14px 18px;padding-top:18px}.op-privacy .op-meta dt{font-size:10px}.op-privacy .op-meta dd{font-size:13px}.op-privacy .op-meta .op-meta-wide{grid-column:1/-1}.op-privacy .op-article{padding:22px 18px;border-radius:13px}.op-privacy .op-scope{padding:18px 16px;border-radius:8px}.op-privacy .op-scope p{font-size:14px;line-height:1.8}.op-privacy .op-section{margin-top:26px;padding-top:26px;scroll-margin-top:20px}.op-privacy .op-section h2{font-size:21px;line-height:1.4;letter-spacing:-.4px;margin-bottom:16px}.op-privacy .op-section p,.op-privacy .op-section ul{font-size:15px;line-height:1.85}.op-privacy .op-section p{margin-bottom:16px}.op-privacy .op-section ul{padding-left:18px}.op-privacy .op-section li{padding-left:2px}.op-privacy .op-article>nav{display:grid;gap:6px;margin-top:28px}.op-privacy .op-article>nav a{font-size:13px}.op-privacy .op-footer{padding-block:25px}.op-privacy .op-footer-inner{gap:14px}.op-privacy .op-footer-links{display:grid;gap:0}}
+@media(max-width:359px){.op-privacy .op-wrap{width:calc(100% - 24px)}.op-privacy h1{font-size:31px}.op-privacy .op-article{padding:18px 15px}.op-privacy .op-meta{column-gap:10px}}
+@media(prefers-reduced-motion:reduce){.op-privacy *{scroll-behavior:auto}}
+@media print{.op-privacy{background:#fff;color:#000}.op-privacy .op-wrap{width:100%}.op-privacy .op-header,.op-privacy .op-toc,.op-privacy .op-back,.op-privacy .op-skip{display:none}.op-privacy .op-hero{padding:0 0 24px}.op-privacy .op-document-grid{display:block}.op-privacy .op-article{padding:0;border:0;box-shadow:none}.op-privacy .op-section{break-inside:auto}.op-privacy .op-section h2{break-after:avoid}.op-privacy .op-footer{background:#fff}.op-privacy a{color:inherit}}
+</style>
 </head>
-<body class="op-policy-page">
+<body class="op-privacy">
 <a class="op-skip" href="#contenido">Saltar al contenido</a>
-<header class="op-policy-header"><a href="index.html#oinkprint"><img src="assets/oinkprint/icono.png" width="56" height="56" alt="Icono original de OinkPrint"><span>OinkPrint · OINKZILLA STUDIOS</span></a></header>
-<main id="contenido">
-<h1>Política de privacidad de OinkPrint</h1>
-<p><strong>Actualizada:</strong> 27 de noviembre de 2026.<br><strong>Aplicación:</strong> OinkPrint · Android.<br><strong>Desarrollador:</strong> OINKZILLA STUDIOS.<br><strong>Paquete:</strong> <code>com.oinkzilla.studios.oinkprint</code>.<br><strong>Contacto:</strong> <a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a>.</p>
-<div class="op-policy-summary"><strong>Alcance de esta política</strong><p>Describe OinkPrint 1.1.0, versión release preparada para lanzamiento con la publicidad desactivada. Esta versión no incluye Google Mobile Ads ni Google User Messaging Platform (UMP). La variante debug de desarrollo utiliza anuncios oficiales de prueba y no es la versión que se distribuirá al público.</p></div>
-<h2>1. Qué hace OinkPrint</h2>
+<header class="op-header"><div class="op-wrap op-header-inner">
+ <div class="op-brand"><img src="assets/oinkprint/icono.png" width="56" height="56" alt="Icono oficial de OinkPrint"><div class="op-brand-text"><span class="op-brand-name">OinkPrint</span><span class="op-studio">OINKZILLA STUDIOS</span></div></div>
+ <a class="op-back" href="index.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 5-7 7 7 7M5 12h14"/></svg><span>Volver al sitio web</span></a>
+</div></header>
+<main id="contenido" class="op-wrap" tabindex="-1">
+ <div class="op-hero"><div><p class="op-eyebrow">Documento de privacidad</p><h1>Política de privacidad de OinkPrint</h1><p class="op-updated"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 11h16"/></svg><span><strong>Actualizada:</strong> 27 de noviembre de 2026.</span></p></div>
+ <dl class="op-meta"><div><dt>Aplicación:</dt><dd>OinkPrint · Android.</dd></div>
+<div><dt>Desarrollador:</dt><dd>OINKZILLA STUDIOS.</dd></div>
+<div class="op-meta-wide"><dt>Paquete:</dt><dd><code>com.oinkzilla.studios.oinkprint</code>.</dd></div>
+<div class="op-meta-wide"><dt>Contacto:</dt><dd><a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a>.</dd></div></dl></div>
+ <div class="op-document-grid">
+  <aside class="op-toc op-toc-desktop" aria-labelledby="op-toc-title"><h2 id="op-toc-title">En esta página</h2><nav aria-label="Índice de la política"><ul><li><a href="#que-hace-oinkprint">1. Qué hace OinkPrint</a></li>
+<li><a href="#fotografias-documentos">2. Fotografías, documentos y acceso a archivos</a></li>
+<li><a href="#proyectos-locales">3. Proyectos guardados localmente</a></li>
+<li><a href="#pdf-compartir-imprimir">4. PDF, compartir e imprimir</a></li>
+<li><a href="#conectividad-terceros">5. Conectividad, terceros y transmisión de datos</a></li>
+<li><a href="#publicidad-consentimiento">6. Publicidad y consentimiento</a></li>
+<li><a href="#conservacion-eliminacion">7. Conservación y eliminación</a></li>
+<li><a href="#copias-transferencias">8. Copias de seguridad y transferencias</a></li>
+<li><a href="#consultas-solicitudes">9. Consultas y solicitudes</a></li>
+<li><a href="#web-cambios">10. Esta web y cambios de política</a></li></ul></nav></aside>
+  <details class="op-toc op-toc-mobile"><summary>Índice de contenido</summary><nav aria-label="Índice de la política en móvil"><ul><li><a href="#que-hace-oinkprint">1. Qué hace OinkPrint</a></li>
+<li><a href="#fotografias-documentos">2. Fotografías, documentos y acceso a archivos</a></li>
+<li><a href="#proyectos-locales">3. Proyectos guardados localmente</a></li>
+<li><a href="#pdf-compartir-imprimir">4. PDF, compartir e imprimir</a></li>
+<li><a href="#conectividad-terceros">5. Conectividad, terceros y transmisión de datos</a></li>
+<li><a href="#publicidad-consentimiento">6. Publicidad y consentimiento</a></li>
+<li><a href="#conservacion-eliminacion">7. Conservación y eliminación</a></li>
+<li><a href="#copias-transferencias">8. Copias de seguridad y transferencias</a></li>
+<li><a href="#consultas-solicitudes">9. Consultas y solicitudes</a></li>
+<li><a href="#web-cambios">10. Esta web y cambios de política</a></li></ul></nav></details>
+  <article class="op-article" aria-label="Contenido de la política de privacidad">
+   <div class="op-scope"><strong>Alcance de esta política</strong><p>Describe OinkPrint 1.1.0, versión release preparada para lanzamiento con la publicidad desactivada. Esta versión no incluye Google Mobile Ads ni Google User Messaging Platform (UMP). La variante debug de desarrollo utiliza anuncios oficiales de prueba y no es la versión que se distribuirá al público.</p></div>
+   <section class="op-section" id="que-hace-oinkprint" aria-labelledby="que-hace-oinkprint-titulo"><h2 id="que-hace-oinkprint-titulo">1. Qué hace OinkPrint</h2>
 <p>OinkPrint permite preparar imágenes con medidas físicas, recortarlas, girarlas, distribuirlas en páginas y generar documentos PDF para guardar, compartir o imprimir. Sus herramientas son gratuitas. No requiere crear una cuenta en OinkPrint.</p>
-<h2>2. Fotografías, documentos y acceso a archivos</h2>
+</section>
+<section class="op-section" id="fotografias-documentos" aria-labelledby="fotografias-documentos-titulo"><h2 id="fotografias-documentos-titulo">2. Fotografías, documentos y acceso a archivos</h2>
 <p>Accedemos a las imágenes que eliges mediante el selector de fotos de Android o que compartes expresamente con OinkPrint desde otra aplicación. La versión revisada no solicita acceso general a tu galería, cámara, contactos ni ubicación del dispositivo.</p>
 <p>La app crea copias de las imágenes elegidas en su almacenamiento interno privado, para que el proyecto no dependa de permisos temporales sobre el archivo de origen. No modifica ni elimina tus fotografías originales externas. Los archivos pueden conservar metadatos de origen, como EXIF; no debe asumirse que exportar elimina todos esos metadatos.</p>
 <p>La edición se realiza en el dispositivo. Los recortes y la corrección de perspectiva se conservan como parámetros de edición sobre la copia original. Las miniaturas y las imágenes decodificadas ayudan a reducir el consumo de memoria.</p>
-<h2>3. Proyectos guardados localmente</h2>
+</section>
+<section class="op-section" id="proyectos-locales" aria-labelledby="proyectos-locales-titulo"><h2 id="proyectos-locales-titulo">3. Proyectos guardados localmente</h2>
 <p>Los proyectos se guardan en una base de datos Room privada. Se conservan el nombre, identificadores internos, fechas de creación y modificación, páginas y orden, papel, orientación, márgenes, medidas, posiciones, giros, contornos, recortes, perspectiva y referencias a las copias de imágenes. También se guarda el proyecto reciente, la página activa, selección y guías para continuar la edición.</p>
 <p>El guardado automático utiliza transacciones. La indicación «Guardado» aparece cuando se ha confirmado el estado correspondiente en el almacenamiento. Los cambios que aún están pendientes pueden perderse si el proceso se cierra antes de completarse la escritura. No ofrecemos recuperación de datos físicamente dañados o borrados del almacenamiento privado.</p>
-<h2>4. PDF, compartir e imprimir</h2>
+</section>
+<section class="op-section" id="pdf-compartir-imprimir" aria-labelledby="pdf-compartir-imprimir-titulo"><h2 id="pdf-compartir-imprimir-titulo">4. PDF, compartir e imprimir</h2>
 <p>Exportar crea un PDF temporal dentro de la app; no elimina el proyecto editable. Guardar PDF permite elegir una ubicación o proveedor de documentos. Compartir, abrir o imprimir entrega el PDF a la aplicación o servicio que tú eliges, mediante mecanismos de Android.</p>
 <p>Esos proveedores pueden guardar o transmitir el documento, usar Internet, servicios en la nube o una red de impresión y aplicar sus propias políticas. Si eliges una imagen almacenada en la nube, su proveedor o el selector del sistema puede necesitar una conexión para obtenerla. Estas operaciones no equivalen a que OinkPrint suba automáticamente tus proyectos a un servidor del estudio.</p>
-<h2>5. Conectividad, terceros y transmisión de datos</h2>
+</section>
+<section class="op-section" id="conectividad-terceros" aria-labelledby="conectividad-terceros-titulo"><h2 id="conectividad-terceros-titulo">5. Conectividad, terceros y transmisión de datos</h2>
 <p>La compilación release revisada no declara permisos de Internet o de estado de red y no incluye un servicio de sincronización, cuentas, SDK analíticos ni SDK publicitarios. El guardado local, la edición y la generación de PDF funcionan sin conexión.</p>
 <p>En esta versión no se implementa una transmisión automática de fotos, proyectos, identificadores publicitarios o telemetría a OINKZILLA STUDIOS o a servidores de anuncios. Room y Gson se utilizan para persistencia y serialización local. Esto no cubre las aplicaciones externas que elijas para abrir, compartir, guardar o imprimir, ni los servicios o diagnósticos del propio sistema operativo.</p>
-<h2>6. Publicidad y consentimiento</h2>
+</section>
+<section class="op-section" id="publicidad-consentimiento" aria-labelledby="publicidad-consentimiento-titulo"><h2 id="publicidad-consentimiento-titulo">6. Publicidad y consentimiento</h2>
 <p>En el release descrito, la publicidad está desactivada y los SDK AdMob y UMP están excluidos del archivo distribuible. No se solicitan anuncios, no se accede al identificador publicitario y no se realizan solicitudes de consentimiento publicitario mediante UMP.</p>
 <p>La integración se conserva únicamente en el proyecto de desarrollo para una posible versión futura. Si se publica una versión con anuncios, se revisarán esta política, la declaración de Seguridad de los datos y los mecanismos de consentimiento aplicables antes de distribuirla. No se debe confundir esa futura modalidad o debug con el release actual.</p>
-<h2>7. Conservación y eliminación</h2>
+</section>
+<section class="op-section" id="conservacion-eliminacion" aria-labelledby="conservacion-eliminacion-titulo"><h2 id="conservacion-eliminacion-titulo">7. Conservación y eliminación</h2>
 <ul>
 <li><strong>Proyectos:</strong> permanecen localmente para que puedas retomarlos después de cerrar o reiniciar. Puedes eliminarlos desde Proyectos, con confirmación. No se eliminan proyectos automáticamente.</li>
 <li><strong>Imágenes compartidas por proyectos:</strong> una misma copia privada puede ser utilizada por varios proyectos. No se borra mientras otro proyecto la necesite.</li>
@@ -41,15 +148,21 @@
 <li><strong>Todos los datos internos:</strong> Borrar datos de OinkPrint en los ajustes de Android o desinstalar la app elimina sus proyectos y copias privadas. No es una forma de conservar el trabajo.</li>
 <li><strong>PDF y archivos externos:</strong> los documentos guardados o compartidos fuera de OinkPrint se eliminan por separado en su ubicación o aplicación de destino. Eliminar el proyecto no elimina esas copias.</li>
 </ul>
-<h2>8. Copias de seguridad y transferencias</h2>
+</section>
+<section class="op-section" id="copias-transferencias" aria-labelledby="copias-transferencias-titulo"><h2 id="copias-transferencias-titulo">8. Copias de seguridad y transferencias</h2>
 <p>OinkPrint no ofrece copia propia en la nube ni sincronización entre dispositivos. La compilación revisada declara <code>allowBackup=false</code>. Las opciones de respaldo o transferencia del sistema pueden depender de Android y del fabricante; revisa sus ajustes y documentación. No garantizamos que un proyecto se recupere después de desinstalar, borrar datos o cambiar de dispositivo. Un PDF externo es una salida visual y no sustituye al archivo editable completo.</p>
-<h2>9. Consultas y solicitudes</h2>
+</section>
+<section class="op-section" id="consultas-solicitudes" aria-labelledby="consultas-solicitudes-titulo"><h2 id="consultas-solicitudes-titulo">9. Consultas y solicitudes</h2>
 <p>Puedes escribir a <a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a> para consultas de privacidad y soporte. Si envías un correo, recibimos tu dirección y el contenido o adjuntos que decidas compartir para atender esa consulta. No envíes documentos sensibles que no sean necesarios para explicar el problema.</p>
 <p>El estudio no tiene acceso remoto a tus proyectos locales y no puede eliminarlos a distancia ni restaurar una copia que no recibió. Para gestionar los datos guardados en el teléfono, utiliza los controles indicados anteriormente. No prometemos plazos o procedimientos automáticos de acceso, eliminación o recuperación que la app no implementa.</p>
-<h2>10. Esta web y cambios de política</h2>
+</section>
+<section class="op-section" id="web-cambios" aria-labelledby="web-cambios-titulo"><h2 id="web-cambios-titulo">10. Esta web y cambios de política</h2>
 <p>Esta página se aloja en GitHub Pages. Al visitarla, tu navegador se conecta al proveedor de alojamiento, que puede tratar datos de conexión conforme a su propia política. La sección de OinkPrint no añade herramientas de analítica ni formularios de seguimiento. El tratamiento de la web se distingue del funcionamiento local de la app Android.</p>
 <p>Actualizaremos la fecha y el contenido si cambia el tratamiento de datos o se activa publicidad en una versión futura. La política de StockOink es independiente y no se sustituye por esta página.</p>
-<nav aria-label="Enlaces de privacidad"><a href="index.html#oinkprint">Volver a OinkPrint</a><a href="index.html#privacidad">Privacidad de nuestras aplicaciones</a><a href="privacidad-stockflow.html">Política de StockOink</a></nav>
+</section>
+   <nav aria-label="Enlaces de privacidad"><a href="index.html#oinkprint">Volver a OinkPrint</a><a href="index.html#privacidad">Privacidad de nuestras aplicaciones</a><a href="privacidad-stockflow.html">Política de StockOink</a></nav>
+  </article>
+ </div>
 </main>
-<footer>© 2026 OINKZILLA STUDIOS · <a href="mailto:oinkzillasupport@gmail.com">Soporte</a></footer>
+<footer class="op-footer"><div class="op-wrap op-footer-inner"><div class="op-footer-brand"><strong>OinkPrint</strong><small>© 2026 OINKZILLA STUDIOS</small></div><div class="op-footer-links"><a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a><a href="index.html">Volver al sitio web</a></div></div></footer>
 </body></html>
