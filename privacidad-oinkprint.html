@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10243A"><meta name="description" content="Política de privacidad de OinkPrint de OINKZILLA STUDIOS: proyectos e imágenes locales, PDF y versión release sin publicidad.">
+<title>Privacidad de OinkPrint | OINKZILLA STUDIOS</title>
+<link rel="icon" href="assets/oinkprint/icono.png" type="image/png"><link rel="stylesheet" href="assets/oinkprint/oinkprint.css">
+<link rel="canonical" href="https://oinkzilla-dev.github.io/privacidad-oinkprint.html">
+</head>
+<body class="op-policy-page">
+<a class="op-skip" href="#contenido">Saltar al contenido</a>
+<header class="op-policy-header"><a href="index.html#oinkprint"><img src="assets/oinkprint/icono.png" width="56" height="56" alt="Icono original de OinkPrint"><span>OinkPrint · OINKZILLA STUDIOS</span></a></header>
+<main id="contenido">
+<h1>Política de privacidad de OinkPrint</h1>
+<p><strong>Actualizada:</strong> 27 de noviembre de 2026.<br><strong>Aplicación:</strong> OinkPrint · Android.<br><strong>Desarrollador:</strong> OINKZILLA STUDIOS.<br><strong>Paquete:</strong> <code>com.oinkzilla.studios.oinkprint</code>.<br><strong>Contacto:</strong> <a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a>.</p>
+<div class="op-policy-summary"><strong>Alcance de esta política</strong><p>Describe OinkPrint 1.1.0, versión release preparada para lanzamiento con la publicidad desactivada. Esta versión no incluye Google Mobile Ads ni Google User Messaging Platform (UMP). La variante debug de desarrollo utiliza anuncios oficiales de prueba y no es la versión que se distribuirá al público.</p></div>
+<h2>1. Qué hace OinkPrint</h2>
+<p>OinkPrint permite preparar imágenes con medidas físicas, recortarlas, girarlas, distribuirlas en páginas y generar documentos PDF para guardar, compartir o imprimir. Sus herramientas son gratuitas. No requiere crear una cuenta en OinkPrint.</p>
+<h2>2. Fotografías, documentos y acceso a archivos</h2>
+<p>Accedemos a las imágenes que eliges mediante el selector de fotos de Android o que compartes expresamente con OinkPrint desde otra aplicación. La versión revisada no solicita acceso general a tu galería, cámara, contactos ni ubicación del dispositivo.</p>
+<p>La app crea copias de las imágenes elegidas en su almacenamiento interno privado, para que el proyecto no dependa de permisos temporales sobre el archivo de origen. No modifica ni elimina tus fotografías originales externas. Los archivos pueden conservar metadatos de origen, como EXIF; no debe asumirse que exportar elimina todos esos metadatos.</p>
+<p>La edición se realiza en el dispositivo. Los recortes y la corrección de perspectiva se conservan como parámetros de edición sobre la copia original. Las miniaturas y las imágenes decodificadas ayudan a reducir el consumo de memoria.</p>
+<h2>3. Proyectos guardados localmente</h2>
+<p>Los proyectos se guardan en una base de datos Room privada. Se conservan el nombre, identificadores internos, fechas de creación y modificación, páginas y orden, papel, orientación, márgenes, medidas, posiciones, giros, contornos, recortes, perspectiva y referencias a las copias de imágenes. También se guarda el proyecto reciente, la página activa, selección y guías para continuar la edición.</p>
+<p>El guardado automático utiliza transacciones. La indicación «Guardado» aparece cuando se ha confirmado el estado correspondiente en el almacenamiento. Los cambios que aún están pendientes pueden perderse si el proceso se cierra antes de completarse la escritura. No ofrecemos recuperación de datos físicamente dañados o borrados del almacenamiento privado.</p>
+<h2>4. PDF, compartir e imprimir</h2>
+<p>Exportar crea un PDF temporal dentro de la app; no elimina el proyecto editable. Guardar PDF permite elegir una ubicación o proveedor de documentos. Compartir, abrir o imprimir entrega el PDF a la aplicación o servicio que tú eliges, mediante mecanismos de Android.</p>
+<p>Esos proveedores pueden guardar o transmitir el documento, usar Internet, servicios en la nube o una red de impresión y aplicar sus propias políticas. Si eliges una imagen almacenada en la nube, su proveedor o el selector del sistema puede necesitar una conexión para obtenerla. Estas operaciones no equivalen a que OinkPrint suba automáticamente tus proyectos a un servidor del estudio.</p>
+<h2>5. Conectividad, terceros y transmisión de datos</h2>
+<p>La compilación release revisada no declara permisos de Internet o de estado de red y no incluye un servicio de sincronización, cuentas, SDK analíticos ni SDK publicitarios. El guardado local, la edición y la generación de PDF funcionan sin conexión.</p>
+<p>En esta versión no se implementa una transmisión automática de fotos, proyectos, identificadores publicitarios o telemetría a OINKZILLA STUDIOS o a servidores de anuncios. Room y Gson se utilizan para persistencia y serialización local. Esto no cubre las aplicaciones externas que elijas para abrir, compartir, guardar o imprimir, ni los servicios o diagnósticos del propio sistema operativo.</p>
+<h2>6. Publicidad y consentimiento</h2>
+<p>En el release descrito, la publicidad está desactivada y los SDK AdMob y UMP están excluidos del archivo distribuible. No se solicitan anuncios, no se accede al identificador publicitario y no se realizan solicitudes de consentimiento publicitario mediante UMP.</p>
+<p>La integración se conserva únicamente en el proyecto de desarrollo para una posible versión futura. Si se publica una versión con anuncios, se revisarán esta política, la declaración de Seguridad de los datos y los mecanismos de consentimiento aplicables antes de distribuirla. No se debe confundir esa futura modalidad o debug con el release actual.</p>
+<h2>7. Conservación y eliminación</h2>
+<ul>
+<li><strong>Proyectos:</strong> permanecen localmente para que puedas retomarlos después de cerrar o reiniciar. Puedes eliminarlos desde Proyectos, con confirmación. No se eliminan proyectos automáticamente.</li>
+<li><strong>Imágenes compartidas por proyectos:</strong> una misma copia privada puede ser utilizada por varios proyectos. No se borra mientras otro proyecto la necesite.</li>
+<li><strong>Registro de eliminación:</strong> puede conservarse en la base privada una marca con el ID, nombre, fechas y metadatos básicos del proyecto eliminado para impedir que un guardado retrasado lo haga reaparecer. No contiene sus páginas ni sus imágenes. Borrar los datos de la aplicación elimina también esos registros.</li>
+<li><strong>Temporales:</strong> Configuración permite limpiar archivos temporales innecesarios con confirmación. Los recursos privados sin referencias se consideran para limpieza cuando tienen más de 24 horas. Los PDF temporales también pueden eliminarse al preparar nuevas exportaciones según su antigüedad.</li>
+<li><strong>Todos los datos internos:</strong> Borrar datos de OinkPrint en los ajustes de Android o desinstalar la app elimina sus proyectos y copias privadas. No es una forma de conservar el trabajo.</li>
+<li><strong>PDF y archivos externos:</strong> los documentos guardados o compartidos fuera de OinkPrint se eliminan por separado en su ubicación o aplicación de destino. Eliminar el proyecto no elimina esas copias.</li>
+</ul>
+<h2>8. Copias de seguridad y transferencias</h2>
+<p>OinkPrint no ofrece copia propia en la nube ni sincronización entre dispositivos. La compilación revisada declara <code>allowBackup=false</code>. Las opciones de respaldo o transferencia del sistema pueden depender de Android y del fabricante; revisa sus ajustes y documentación. No garantizamos que un proyecto se recupere después de desinstalar, borrar datos o cambiar de dispositivo. Un PDF externo es una salida visual y no sustituye al archivo editable completo.</p>
+<h2>9. Consultas y solicitudes</h2>
+<p>Puedes escribir a <a href="mailto:oinkzillasupport@gmail.com">oinkzillasupport@gmail.com</a> para consultas de privacidad y soporte. Si envías un correo, recibimos tu dirección y el contenido o adjuntos que decidas compartir para atender esa consulta. No envíes documentos sensibles que no sean necesarios para explicar el problema.</p>
+<p>El estudio no tiene acceso remoto a tus proyectos locales y no puede eliminarlos a distancia ni restaurar una copia que no recibió. Para gestionar los datos guardados en el teléfono, utiliza los controles indicados anteriormente. No prometemos plazos o procedimientos automáticos de acceso, eliminación o recuperación que la app no implementa.</p>
+<h2>10. Esta web y cambios de política</h2>
+<p>Esta página se aloja en GitHub Pages. Al visitarla, tu navegador se conecta al proveedor de alojamiento, que puede tratar datos de conexión conforme a su propia política. La sección de OinkPrint no añade herramientas de analítica ni formularios de seguimiento. El tratamiento de la web se distingue del funcionamiento local de la app Android.</p>
+<p>Actualizaremos la fecha y el contenido si cambia el tratamiento de datos o se activa publicidad en una versión futura. La política de StockOink es independiente y no se sustituye por esta página.</p>
+<nav aria-label="Enlaces de privacidad"><a href="index.html#oinkprint">Volver a OinkPrint</a><a href="index.html#privacidad">Privacidad de nuestras aplicaciones</a><a href="privacidad-stockflow.html">Política de StockOink</a></nav>
+</main>
+<footer>© 2026 OINKZILLA STUDIOS · <a href="mailto:oinkzillasupport@gmail.com">Soporte</a></footer>
+</body></html>
